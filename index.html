@@ -8,9 +8,10 @@
         body {
             font-family: 'Arial Black', sans-serif;
             text-align: center;
-            margin-top: 100px;
+            margin: 0; /* 移除默认的margin */
+            padding: 0; /* 移除默认的padding */
             background: linear-gradient(45deg, #55e9e4, #ff64d0);
-            height: 100vh;
+            min-height: 100vh; /* 使用min-height代替height */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,7 +19,7 @@
         }
 
         h1 {
-            font-size: 48px;
+            font-size: 48px; /* 默认字体大小 */
             text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
             animation: pulse 2s infinite;
         }
@@ -34,9 +35,24 @@
                 transform: scale(1);
             }
         }
+
+        /* 响应式设计：针对小屏幕设备 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px; /* 在小屏幕上减小字体大小 */
+            }
+        }
+
+        /* 响应式设计：针对更小的屏幕设备 */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px; /* 在更小的屏幕上进一步减小字体大小 */
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>WeLCoMe to LeeHo's BLoG</h1>
+    <!-- <h1>WeLCoMe to LeeHo's BLoG</h1>-->
+    <h1> Don't play your HUAWEI MATE 60</h1>
 </body>
 </html>
